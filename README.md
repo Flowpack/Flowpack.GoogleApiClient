@@ -6,7 +6,7 @@ A package that provides authentication and helpers for the Google Api Client to 
 
 Add the dependency to your site package like this
 
-    `composer require --no-update flowpack/googleapiclient`
+    composer require --no-update flowpack/googleapiclient
     
 And then run `composer update` in your projects root folder.
 
