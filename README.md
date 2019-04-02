@@ -1,23 +1,22 @@
 # flowpack-googleapiclient
 
-A package that provides authentication and helpers for the Google Api Client to other Neos Flow & CMS packages.
+A package that provides Neos Flow & CMS packages with authentication and helpers for the Google API Client.
 
 ## Installation
 
-Add the dependency to your site package like this
+Add the dependency to your site package like this:
 
     composer require --no-update flowpack/googleapiclient
     
-And then run `composer update` in your projects root folder.
+And then run `composer update` in your project's root folder.
 
 ## Configuration
 
 ### Authentication
 
-First retrieve your `auth.json` from [Google](https://cloud.google.com/docs/authentication/production).
+First retrieve your `auth.json` file from [Google](https://cloud.google.com/docs/authentication/production).
 
-To allow the api client to authenticate you either have to store
-the credentials via the following command:
+To allow the API client to authenticate, you either have to store the credentials via the following command:
 
     ./flow googleapi:storecredentials auth.json
 
@@ -28,12 +27,12 @@ Or set the environment variable `GOOGLE_APPLICATION_CREDENTIALS` to the path whe
 Set your application name in your `Settings.yaml` like this:
 
     Flowpack:
-        GoogleApiClient:
-            applicationName: 'My app' 
+      GoogleApiClient:
+        applicationName: 'My app' 
 
 ## Usage
 
-Add an `Objects.yaml` to your packages `Configuration` folder with the following content and adapt to your service name:
+Add an `Objects.yaml` to your package's `Configuration` folder with the following content and adapt to your service name:
 
     Vendor\Package\Service\MyGoogleService:
       arguments:
@@ -72,4 +71,4 @@ In this example it would use the API for the Google Webmasters endpoints.
 
 You can adjust this to the API you need by changing the inheritance and setting the correct scope in the constructor.
 
-Finally implement the methods for accessing the API and use inject the service wherever you need it.
+Finally implement the methods for accessing the API and inject the service wherever you need it.
