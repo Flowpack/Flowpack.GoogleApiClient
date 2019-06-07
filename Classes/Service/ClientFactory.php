@@ -110,7 +110,7 @@ class ClientFactory
                 $this->logger->warning(sprintf(
                     'Missing Google credentials. Please use "./flow googleapi:storecredentials auth.json"' .
                     'or set %s according to https://cloud.google.com/docs/authentication/production',
-                    [CredentialsLoader::ENV_VAR]));
+                    CredentialsLoader::ENV_VAR));
             }
         } else {
             $client->setAuthConfig($this->credentialsStorage->getCredentials());
